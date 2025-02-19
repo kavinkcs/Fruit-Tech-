@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient rgba(0,0,0,0.5);
+            color: #ffffff;
+            line-height: 1.6;
+            position: relative;
+            text-align: center;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 15px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .buy-button {
+            background: linear-gradient(135deg, #1e1c1c, #000000);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 10px 20px;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .buy-button:hover {
+            background: linear-gradient(135deg, #ffcc00, #ff6699);
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="product-container">
+        <div class="product-card">
+            <img id="productImage" src="" alt="Product Image">
+            <h2 id="productName"></h2>
+            <p id="productDescription"></p>
+            <p id="productPrice" style="font-size: 1.2em; font-weight: bold; color: yellow;"></p>
+            <a href="#" class="buy-button">Buy Now</a>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+        
+        const products = {
+            pineWatch: { name: "PineWatch", image: "image01.jpg", description: "Stay stylish and punctual with our vibrant pinewatch.", price: "$99.99" },
+            cocoCable: { name: "CocoCable", image: "image02.jpg", description: "Charge your devices with our colorful and durable coccable.", price: "$19.99" },
+            kiwiHead: { name: "KiwiHead", image: "image03.jpg", description: "Immerse yourself in sound with our stylish kiwihead.", price: "$79.99" },
+            grapybuds: { name: "Grapybuds", image: "image04.jpg", description: "Enjoy your music on the go with our compact  grapybuds.", price: "$49.99" },
+            berryPad: { name: "Berry blast speakers", image: "image05.jpg", description: "Enhance your workspace with our smooth and stylish berryblast speakers.", price: "$29.99" },
+            orangeCharge: { name: "OrangeCharge", image: "image06.jpg", description: "Enjoy your music on our compact efficient and vibrant orangey bud.", price: "$39.99" }
+        };
+
+        if (products[product]) {
+            document.getElementById("productImage").src = products[product].image;
+            document.getElementById("productName").innerText = products[product].name;
+            document.getElementById("productDescription").innerText = products[product].description;
+            document.getElementById("productPrice").innerText = products[product].price;
+        } else {
+            document.querySelector(".product-card").innerHTML = "<h2>Product Not Found</h2>";
+        }
+    </script>
+</body>
+</html>

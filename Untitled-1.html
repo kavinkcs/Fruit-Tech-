@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tech Accessories</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #230432, #3d0643);
+            color: #ffffff;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .buy-button {
+            background: linear-gradient(135deg, #1e1c1c, #000000);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 10px 20px;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .buy-button:hover {
+            background: linear-gradient(135deg, #ffcc00, #ff6699);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            position: relative;
+            bottom: 0;
+            width: 100%;e
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <h1>Fruit Textured Tech Accessories</h1>
+        <p>Experience technology with a fruity twist!</p>
+    </header>
+
+    <main>
+        <section class="product-container">
+            <div class="product">
+                <img src="image01.jpg" alt="Fruit Textured Watch">
+                <h2>pineWatch</h2>
+                <p>Stay stylish and punctual with our vibrant pinewatch.</p>
+                <a href="product.html?product=pineWatch" class="buy-button">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="image02.jpg" alt="Fruit Textured Cable">
+                <h2>cocoCable</h2>
+                <p>Charge your devices with our colorful and durable coccable.</p>
+                <a href="product.html?product=cocoCable" class="buy-button">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="image03.jpg" alt="Fruit Textured Headphones">
+                <h2>kiwiHead</h2>
+                <p>Immerse yourself in sound with our stylish kiwihead.</p>
+                <a href="product.html?product=kiwiHead" class="buy-button">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="image04.jpg" alt="Fruit Textured Earphones">
+                <h2>grapybuds</h2>
+                <p>Enjoy your music on the go with our compact fruit textured grapybuds.</p>
+                <a href="product.html?product=grapybuds" class="buy-button">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="image05.jpg" alt="Fruit Textured Mousepad">
+                <h2>berryblast speakers </h2>
+                <p>Enhance your workspace with our smooth and stylish berryblast speakers.</p>
+                <a href="poduct.html?product=berryPad" class="buy-button">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="image06.jpg" alt="Fruit Textured Wireless Charger">
+                <h2>orangey buds</h2>
+                <p>Enjoy your music on our compact efficient and vibrant orangey bud.</p>
+                <a href="product.html?product=orangey bud" class="buy-button">Buy Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fruit Tech Accessories. All rights reserved.</p>
+    </footer>
+</body>
+</html>
